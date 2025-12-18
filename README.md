@@ -56,27 +56,20 @@ GRANT ALL PRIVILEGES ON DATABASE customauth TO postgres;
 
 ### 5. Настройка переменных окружения
 
-Создайте файл `.env` в корне проекта:
+Создайте файл `.env` в корне проекта со следующими переменными:
 
-```env
-# Django Settings
-SECRET_KEY=django-insecure-zt14damxagbm+(l&q4d=0b)&3rwh_6)gv)54sw3n5e2_h^iau3
-DEBUG=True
-ALLOWED_HOSTS=
-
-# Database Settings
-DB_NAME=customauth
-DB_USER=postgres
-DB_PASSWORD=postgres
-DB_HOST=localhost
-DB_PORT=5432
-
-# JWT Settings
-JWT_SECRET_KEY=jwt-secret-key-change-in-production
-JWT_ALGORITHM=HS256
-JWT_ACCESS_TOKEN_EXPIRE_MINUTES=30
-JWT_REFRESH_TOKEN_EXPIRE_DAYS=7
-```
+- `SECRET_KEY` - секретный ключ Django (обязательно)
+- `DEBUG` - режим отладки (по умолчанию: True)
+- `ALLOWED_HOSTS` - разрешенные хосты (через запятую)
+- `DB_NAME` - имя базы данных (по умолчанию: customauth)
+- `DB_USER` - пользователь БД (по умолчанию: postgres)
+- `DB_PASSWORD` - пароль БД (по умолчанию: postgres)
+- `DB_HOST` - хост БД (по умолчанию: localhost)
+- `DB_PORT` - порт БД (по умолчанию: 5432)
+- `JWT_SECRET_KEY` - секретный ключ для JWT (обязательно)
+- `JWT_ALGORITHM` - алгоритм JWT (по умолчанию: HS256)
+- `JWT_ACCESS_TOKEN_EXPIRE_MINUTES` - время жизни access токена в минутах (по умолчанию: 30)
+- `JWT_REFRESH_TOKEN_EXPIRE_DAYS` - время жизни refresh токена в днях (по умолчанию: 7)
 
 ### 6. Применение миграций
 
