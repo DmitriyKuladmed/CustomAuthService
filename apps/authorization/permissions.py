@@ -108,3 +108,4 @@ class IsAdmin(permissions.BasePermission):
             return False
         return request.user.role and request.user.role.name == "admin"
 
+

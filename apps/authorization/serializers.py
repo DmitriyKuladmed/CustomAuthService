@@ -68,3 +68,4 @@ class AccessRoleRuleCreateSerializer(serializers.ModelSerializer):
             "delete_all_permission",
         ]
 
+

@@ -51,3 +51,4 @@ def get_user_id_from_token(token: str) -> Optional[str]:
         return payload.get("user_id")
     return None
 
+

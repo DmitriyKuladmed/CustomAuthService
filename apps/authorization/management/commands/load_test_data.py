@@ -188,3 +188,4 @@ class Command(BaseCommand):
             else:
                 self.stdout.write(f"  Пользователь уже существует: {user.email}")
 
+

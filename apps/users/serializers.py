@@ -61,3 +61,4 @@ class UserListSerializer(serializers.ModelSerializer):
             "created_at",
         ]
 
+

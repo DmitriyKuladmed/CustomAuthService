@@ -15,3 +15,4 @@ urlpatterns = [
     path("stores/<int:pk>/", views.store_detail, name="store-detail"),
 ]
 
+
